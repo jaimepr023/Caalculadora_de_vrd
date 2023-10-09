@@ -10,7 +10,7 @@ namespace calculcadora.Servicios
     /// Interfaz donde estara la cabecera de los métodos
     /// @autor jpr-091023
     /// </summary>
-    internal interface MenuInterfaz
+    internal interface MenuInterfaz 
     {
         /// <summary>
         /// cabecera del mensajeBienvenida

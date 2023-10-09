@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace calculcadora.Servicios
 {
     /// <summary>
-    /// 
+    /// Clase de la implementacion
+    /// @autor jpr-091023
     /// </summary>
     internal class MenuImplementacion : MenuInterfaz
     {
         /// <summary>
-        /// 
+        /// Metodo que muestra en pantalla el mensaje orincipal
+        /// @autor jpr-091023
         /// </summary>
         public void mensajeBienvenida()
         {
