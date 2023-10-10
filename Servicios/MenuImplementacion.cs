@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace calculcadora.Servicios
 {
-    /// <summary>
-    /// Clase de la implementacion
-    /// @autor jpr-091023
-    /// </summary>
+    
     internal class MenuImplementacion : MenuInterfaz
     {
-        /// <summary>
-        /// Metodo que muestra en pantalla el mensaje orincipal
-        /// @autor jpr-091023
-        /// </summary>
+       
         public void mensajeBienvenida()
         {
             string mensaje = "Elija la opción para calcular la operacion deseada";
@@ -24,6 +18,7 @@ namespace calculcadora.Servicios
 
         public int menuBucle()
         {
+
             int opcionescogida;
             Console.WriteLine("####################");
             Console.WriteLine("0. Cerrar Menú.");
@@ -35,5 +30,7 @@ namespace calculcadora.Servicios
             opcionescogida = Console.ReadKey(true).KeyChar - ('0');
             return opcionescogida;
         }
+
+     
     }
 }
