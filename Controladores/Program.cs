@@ -14,13 +14,13 @@ namespace calculcadora
         /// @autor jpr-091023
         /// </summary>
         /// <param name="args"></param>
-        public static void Main(String[] args, InterfazSuma interfazSuma)
+        public static void Main(String[] args)
         {
             MenuInterfaz menuInterfaz = new MenuImplementacion();
             menuInterfaz.mensajeBienvenida();
             bool cerrarMenu = false;
             int opcionSelect;
-
+            InterfazSuma interfazSuma= new ImplementacionSuma();
             while (!cerrarMenu)
             {
                 opcionSelect = menuInterfaz.menuBucle();
@@ -37,27 +37,27 @@ namespace calculcadora
                         float operador2;
                         operador = interfazSuma.devuelveUnEntero();
                         operador2 = interfazSuma.devuelveUnEntero();
-                        float retultado = operador + operador2;
-                        Console.WriteLine(retultado);
+                        float retultado = interfazSuma.operacionsuma(operador , operador2);
+                        Console.WriteLine("El resultado es:"+retultado +"\n");
 
                         break;
                     case 2:
                         float operador3 = interfazSuma.devuelveUnEntero();
                         float operador4 = interfazSuma.devuelveUnEntero();
-                        float resultado2 = operador3 - operador4;
-                        Console.WriteLine(resultado2 + "\n");
+                        float resultado2 = interfazSuma.operacionresta(operador3, operador4);
+                        Console.WriteLine("El resultado es:"+resultado2 + "\n");
                         break;
                     case 3:
                         float operador5 = interfazSuma.devuelveUnEntero();
                         float operador6 = interfazSuma.devuelveUnEntero();
-                        float resultado3 = operador5 * operador6;
-                        Console.WriteLine(resultado3 + "\n");
+                        float resultado3 = interfazSuma.opcionmulti(operador5 , operador6);
+                        Console.WriteLine("El resultado es:"+resultado3 + "\n");
                         break;
                     case 4:
                         float operador7 = interfazSuma.devuelveUnEntero();
                         float operador8 = interfazSuma.devuelveUnEntero();
-                        float resultado4 = operador7 / operador8;
-                        Console.WriteLine(resultado4 + "\n");
+                        float resultado4 = interfazSuma.opciondivi(operador7 , operador8); 
+                        Console.WriteLine("El resultado es:"+resultado4 + "\n");
                         break;
                     default:
                         Console.WriteLine("[INFOS]-La opcion seleccionada no existe");
